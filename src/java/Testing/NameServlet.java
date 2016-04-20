@@ -189,6 +189,44 @@ public class NameServlet extends HttpServlet {
                 
                 responseString = a.toString();
             }
+            if(task.equals("getTreatmentAims"))
+            {
+                JSONObject treatment1 = new JSONObject();
+                treatment1.put("Treatment", "Entspannt fühlen");
+                
+                JSONObject treatment2 = new JSONObject();
+                treatment2.put("Treatment", "Haut pflegen");
+                
+                JSONObject treatment3 = new JSONObject();
+                treatment3.put("Treatment", "Kreislauf aktivieren");
+                
+                JSONArray a = new JSONArray();
+                a.put(treatment1);
+                a.put(treatment2);
+                a.put(treatment3);
+                
+                responseString = a.toString();
+                
+            }
+            if(task.equals("getConditions"))
+            {
+                JSONObject condition1 = new JSONObject();
+                condition1.put("Condition", "Kopfschmerzen");
+                
+                JSONObject condition2 = new JSONObject();
+                condition2.put("Condition", "Kreislaufprobleme");
+                
+                JSONObject condition3 = new JSONObject();
+                condition3.put("Condition", "Unreine Haut");
+                
+                JSONArray a = new JSONArray();
+                a.put(condition1);
+                a.put(condition2);
+                a.put(condition3);
+                
+                responseString = a.toString();
+                
+            }
             
             else
             {
